@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "593268337315",
+    "project_id": "my-destinations-c13af",
+    "storage_bucket": "my-destinations-c13af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593268337315:android:65f74415270d97a516ed16",
+        "android_client_info": {
+          "package_name": "com.abdallahyasser.mydestinations"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMbm9-OM0zyGzNAFzSAoROpKym7e6cydU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593268337315:android:bb3a4cbe09261ef016ed16",
+        "android_client_info": {
+          "package_name": "com.example.my_destinations"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMbm9-OM0zyGzNAFzSAoROpKym7e6cydU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
