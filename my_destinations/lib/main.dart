@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:my_destinations/UI/screens/login_screen.dart';
 import 'package:my_destinations/app_router.dart';
 
 void main() async {
-  
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -27,12 +27,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
-          appBar: AppBar(
-        title: const Text(
-          'Flutter Demo Home Page!',
-          style: TextStyle(color: Colors.black87),
+        appBar: AppBar(
+          title: const Text(
+            'Flutter Demo Home Page!',
+            style: TextStyle(color: Colors.black87),
+          ),
         ),
-      )),
+        body: LoginScreen(),
+      ),
     );
   }
 }

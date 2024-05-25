@@ -8,7 +8,7 @@ class AppRouter {
       case '/':
       return MaterialPageRoute(builder: (_) => const HomeScreen());
       case '/login':
-      return MaterialPageRoute(builder: (_) => const LoginScreen());
+      return MaterialPageRoute(builder: (_) => LoginScreen());
       default:
       return MaterialPageRoute(builder: (_) => const Scaffold(body: Center(child: Text('Route not found'))));
     }
