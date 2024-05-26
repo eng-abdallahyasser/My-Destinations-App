@@ -1,7 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:my_destinations/UI/screens/login_screen.dart';
-import 'package:my_destinations/UI/screens/otp_screen.dart';
 import 'package:my_destinations/app_router.dart';
 import 'package:my_destinations/constants/my_colors.dart';
 import 'package:my_destinations/constants/strings.dart';
