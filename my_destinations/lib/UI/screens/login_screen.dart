@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_destinations/constants/my_colors.dart';
+import 'package:my_destinations/helpers/strings_transformer.dart';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
@@ -44,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                   border: Border.all(color: MyColors.myBlack),
                   borderRadius: const BorderRadius.all(Radius.circular(6))),
               child: Text(
-                "${generateCountryFlag('eg')} +20",
+                "${StringsTransformer.countryCodeToFlag('eg')} +20",
                 style: const TextStyle(fontSize: 18),
               )),
         ),
@@ -84,11 +85,6 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  String generateCountryFlag(String countryCode) {
-    return countryCode.toUpperCase().replaceAllMapped(RegExp(r'[A-Z]'),
-        (match) => String.fromCharCode(match.group(0)!.codeUnitAt(0) + 127397));
-  }
-
   Widget _bluidNextButton() {
     return Align(
       alignment: Alignment.centerRight,
@@ -118,7 +114,7 @@ class LoginScreen extends StatelessWidget {
         body: Form(
           key: UniqueKey(),
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+            margin: const EdgeInsets.fromLTRB(32, 80, 32, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
