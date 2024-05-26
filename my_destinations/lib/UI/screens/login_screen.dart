@@ -7,7 +7,7 @@ import 'package:my_destinations/helpers/strings_transformer.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
   final GlobalKey<FormState> _phoneFormKey = GlobalKey();
-  String _phone = '';
+  String _phone = '+201023684509';
 
   Widget _bluidIntroTexts() {
     return const Column(children: [

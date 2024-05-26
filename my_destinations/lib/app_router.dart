@@ -5,6 +5,8 @@ import 'package:my_destinations/UI/screens/otp_screen.dart';
 import 'package:my_destinations/constants/strings.dart';
 
 class AppRouter {
+
+  
   Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case homeScreen:

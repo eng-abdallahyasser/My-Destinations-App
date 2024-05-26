@@ -5,9 +5,9 @@ import 'package:my_destinations/constants/my_colors.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpScreen extends StatelessWidget {
-  OtpScreen({super.key});
+  const OtpScreen({super.key});
 
-  final _phoneNumber = "";
+  final _phoneNumber = '+201023684509';
 
   Widget _bluidIntroTexts() {
     return Column(children: [
@@ -23,20 +23,19 @@ class OtpScreen extends StatelessWidget {
         height: 20,
       ),
       RichText(
-          text: const TextSpan(
+          text: TextSpan(
               text: 'Enter your 6 digits code number sent to ',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 color: MyColors.myBlack,
-                height: 3,
               ),
               children: [
             TextSpan(
-                text: '+123456789',
-                style: TextStyle(
-                    fontSize: 24,
-                    color: MyColors.myTeal,
-                    fontWeight: FontWeight.w900))
+                text: _phoneNumber,
+                style: const TextStyle(
+                  fontSize: 24,
+                  color: MyColors.myTeal,
+                ))
           ]))
     ]);
   }
@@ -63,9 +62,7 @@ class OtpScreen extends StatelessWidget {
       onCompleted: (code) {
         // otpCode = code;
       },
-      onChanged: (value) {
-        
-      },
+      onChanged: (value) {},
     );
   }
 

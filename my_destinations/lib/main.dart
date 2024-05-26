@@ -1,7 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:my_destinations/UI/screens/login_screen.dart';
+import 'package:my_destinations/UI/screens/otp_screen.dart';
 import 'package:my_destinations/app_router.dart';
+import 'package:my_destinations/constants/my_colors.dart';
+import 'package:my_destinations/constants/strings.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,18 +26,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Destinations',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: MyColors.myTeal),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Flutter Demo Home Page!',
-            style: TextStyle(color: Colors.black87),
-          ),
-        ),
-        body: LoginScreen(),
-      ),
+      onGenerateRoute: appRouter.generateRoute,
+      initialRoute: loginScreen,
     );
   }
 }
