@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_destinations/constants/my_colors.dart';
+import 'package:my_destinations/constants/strings.dart';
 import 'package:my_destinations/helpers/strings_transformer.dart';
 
 // ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
-
+  final GlobalKey<FormState> _phoneFormKey = GlobalKey();
   String _phone = '';
 
   Widget _bluidIntroTexts() {
@@ -28,9 +29,6 @@ class LoginScreen extends StatelessWidget {
           color: MyColors.myBlack,
         ),
       ),
-      SizedBox(
-        height: 60,
-      )
     ]);
   }
 
@@ -85,22 +83,21 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget _bluidNextButton() {
+  Widget _bluidNextButton(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 12),
-        child: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-              minimumSize: const Size(120, 50),
-              backgroundColor: MyColors.myBlack,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6))),
-          child: const Text(
-            'Next',
-            style: TextStyle(fontSize: 18, color: MyColors.myWhite),
-          ),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushNamed(context, otpScreen);
+        },
+        style: ElevatedButton.styleFrom(
+            minimumSize: const Size(120, 50),
+            backgroundColor: MyColors.myBlack,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(6))),
+        child: const Text(
+          'Next',
+          style: TextStyle(fontSize: 18, color: MyColors.myWhite),
         ),
       ),
     );
@@ -112,15 +109,17 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: MyColors.myWhite,
         body: Form(
-          key: UniqueKey(),
+          key: _phoneFormKey,
           child: Container(
             margin: const EdgeInsets.fromLTRB(32, 80, 32, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _bluidIntroTexts(),
+                const SizedBox(height: 60),
                 _bluidPhoneFormField(),
-                _bluidNextButton(),
+                const SizedBox(height: 16),
+                _bluidNextButton(context),
               ],
             ),
           ),
